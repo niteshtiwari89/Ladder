@@ -603,14 +603,14 @@ return (
                     />
                   </div>
                   <div className="flex h-full w-1/2 flex-col gap-4">
-                    <div className="overflow-hidden rounded-sm">
+                    <div className="overflow-hidden h-1/2 rounded-sm">
                       <img
                         src="/peb-right-img1.jpg"
                         alt="PEB red panel"
                         className="h-1/2 object-cover transition-transform duration-500 hover:scale-105"
                       />
                     </div>
-                    <div className="overflow-hidden rounded-sm">
+                    <div className="overflow-hidden  h-1/2 rounded-sm">
                       <img
                         src="/peb-right-img2.png"
                         alt="PEB structure interior"
