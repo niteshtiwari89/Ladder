@@ -1,5 +1,6 @@
 import React from 'react'
 import { Check } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 const AboutWhy = () => {
 
@@ -90,7 +91,12 @@ const AboutWhy = () => {
     <>
       {/* Hero Section with Background Image */}
 
-      <div className="relative w-full h-80 md:h-96">
+      <motion.div 
+        initial={{ opacity: 0, y: -50 }} 
+        animate={{ opacity: 1, y: 0 }} 
+        transition={{ duration: 0.8 }}
+        className="relative w-full h-80 md:h-96"
+      >
         {/* Background image with overlay */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -115,14 +121,20 @@ const AboutWhy = () => {
             <span className="text-[#8CB5FF] font-bold text-xl">Why Us ?</span>
           </div>
         </div>
-      </div>
+      </motion.div>
 
 
 
       {/* About us */}
 
 
-      <div className="w-full bg-white py-16 px-4">
+       <motion.div 
+        initial={{ opacity: 0 }} 
+        whileInView={{ opacity: 1 }} 
+        viewport={{ once: true }} 
+        transition={{ duration: 1 }}
+        className="w-full bg-white py-16 px-4"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Left content area */}
@@ -161,12 +173,18 @@ const AboutWhy = () => {
             </div>
           </div>
         </div>
-      </div>
+     </motion.div>
 
 
       {/*WHY US ? */}
 
-      <div className="w-full bg-white py-16 px-4">
+       <motion.div 
+        initial={{ opacity: 0, x: -50 }} 
+        whileInView={{ opacity: 1, x: 0 }} 
+        viewport={{ once: true }} 
+        transition={{ duration: 1 }}
+        className="w-full bg-white py-16 px-4"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
             {/* Left image area */}
@@ -249,7 +267,7 @@ const AboutWhy = () => {
             </div>
           </div>
         </div>
-      </div>
+       </motion.div>
 
 
 
@@ -257,36 +275,71 @@ const AboutWhy = () => {
 
       <div className="max-w-6xl mx-auto p-4">
         <h1 className="text-3xl font-bold text-center mb-8">Top of the line facility</h1>
-        <div className="flex flex-col md:flex-row gap-6">
-          <div className="md:w-3/5">
-            <ul className="space-y-4">
+         <motion.div 
+          initial="hidden" 
+          whileInView="visible" 
+          viewport={{ once: true }} 
+          variants={{
+            hidden: {},
+            visible: { 
+              transition: { staggerChildren: 0.2 }
+            }
+          }}
+          className="flex flex-col md:flex-row gap-6"
+        >
+          <motion.ul 
+            variants={{
+              hidden: { opacity: 0, x: -30 },
+              visible: { opacity: 1, x: 0 }
+            }}
+            className="md:w-3/5 space-y-4"
+          >
               {facilities.map((facility, index) => (
-                <li key={index} className="flex items-start">
+                 <motion.li 
+                key={index} 
+                variants={{
+                  hidden: { opacity: 0, x: -30 },
+                  visible: { opacity: 1, x: 0 }
+                }} 
+                transition={{ duration: 0.5 }}
+                className="flex items-start"
+              >
                   <div className="min-w-6 h-6 rounded-full bg-[#345CA5] flex items-center justify-center mr-3 mt-1">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                   <span className="text-gray-700">{facility}</span>
-                </li>
+                </motion.li>
               ))}
-            </ul>
-          </div>
+            </motion.ul>
 
-          <div className="md:w-2/5 mt-6 md:mt-0">
+           <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }} 
+            whileInView={{ opacity: 1, scale: 1 }} 
+            viewport={{ once: true }} 
+            transition={{ duration: 1 }}
+            className="md:w-2/5 mt-6 md:mt-0"
+          >
             <img
               src="/why-us-img.png"
               alt="Urban skyline with high-rise buildings"
               className="w-[700px] h-96 grayscale object-cover opacity-40"
             />
-          </div>
-        </div>
+          </motion.div>
+         </motion.div>
       </div>
 
 
       {/* Who we are */}
 
-      <div className="max-w-6xl mx-auto p-4 bg-white">
+       <motion.div 
+        initial={{ opacity: 0 }} 
+        whileInView={{ opacity: 1 }} 
+        viewport={{ once: true }} 
+        transition={{ duration: 1 }}
+        className="max-w-6xl mx-auto p-4 bg-white"
+      >
         <div className="text-center mb-2">
           <p className="text-orange-400 text-sm">Who we are?</p>
           <h1 className="text-3xl font-bold mb-6">Innovating Structures, Building Futures</h1>
@@ -301,10 +354,26 @@ const AboutWhy = () => {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-2 md:gap-0">
+       <motion.div 
+          className="flex flex-wrap justify-center gap-2 md:gap-0"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.2 } }
+          }}
+        >
           {phases.map((phase, index) => (
-            <div key={index} className="flex flex-col items-center w-full sm:w-1/2 md:w-1/5 mb-8">
-              <div className="relative mb-2">
+<motion.div 
+              key={index} 
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0 }
+              }} 
+              transition={{ duration: 0.5 }}
+              className="flex flex-col items-center w-full sm:w-1/2 md:w-1/5 mb-8"
+            >              <div className="relative mb-2">
                 <div className={`rounded-full border-4 ${phase.borderColor} w-24 h-24 flex items-center justify-center mb-1`}>
                   <div className="absolute -top-6 font-bold text-2xl">{phase.number}</div>
                   <div className="text-center px-2">
@@ -317,20 +386,43 @@ const AboutWhy = () => {
                   <p key={idx} className={`text-xs ${phase.color} mb-1`}>{item}</p>
                 ))}
               </div>
-            </div>
+           </motion.div>
           ))}
-        </div>
-      </div>
+          </motion.div>
+      </motion.div>
 
 
       {/* Manufacturing Facility */}
 
-      <div className="max-w-8xl mx-auto p-4">
+      <motion.div 
+        initial={{ opacity: 0 }} 
+        whileInView={{ opacity: 1 }} 
+        viewport={{ once: true }} 
+        transition={{ duration: 1 }}
+        className="max-w-8xl mx-auto p-4"
+      >
         <h1 className="text-3xl font-bold text-center mb-8">Our Manufacturing Facility</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {manufacturing.map((manufacturing, index) => (
-            <div key={index} className="border-gray-500 rounded-md overflow-hidden shadow-sm">
-              <img
+<motion.div 
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.2 } }
+          }}
+        >
+                    {manufacturing.map((manufacturing, index) => (
+ <motion.div 
+              key={index} 
+              variants={{
+                hidden: { opacity: 0, scale: 0.8 },
+                visible: { opacity: 1, scale: 1 }
+              }} 
+              transition={{ duration: 0.5 }}
+              className="border-gray-500 rounded-md overflow-hidden shadow-sm"
+            >
+                            <img
                 src={manufacturing.image}
                 alt={manufacturing.title}
                 className="w-full h-64 object-cover"
@@ -338,14 +430,11 @@ const AboutWhy = () => {
               <div className="p-4 text-center">
                 <p className="text-gray-800 text-lg">{manufacturing.title}</p>
               </div>
-            </div>
+                       </motion.div>
+
           ))}
-        </div>
-      </div>
-
-
-
-
+        </motion.div>
+      </motion.div>
     </>
   )
 }

@@ -36,7 +36,7 @@ import PebMills from './pages/PebMills.jsx'
 const App = () => {
   return (
 
-    <>
+    <div className="fade-in">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -71,7 +71,7 @@ const App = () => {
         <Route path="/pre-engg/peb-metro" element={<PebMetro />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   )
 }
 
