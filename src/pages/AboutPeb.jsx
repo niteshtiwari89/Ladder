@@ -595,26 +595,26 @@ return (
               {/* Left: Image collage */}
               <div className="space-y-4 h-[400px] lg:w-1/3">
                 <div className="flex h-1/2 grid-cols-2 gap-4">
-                  <div className="overflow-hidden rounded-sm">
+                  <div className="overflow-hidden w-1/2 rounded-sm">
                     <img
                       src="/peb-left-img.jpg"
                       alt="PEB building front"
                       className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                     />
                   </div>
-                  <div className="flex h-full flex-col gap-4">
-                    <div className="overflow-hidden rounded-sm">
+                  <div className="flex h-full w-1/2 flex-col gap-4">
+                    <div className="overflow-hidden h-1/2 rounded-sm">
                       <img
                         src="/peb-right-img1.jpg"
                         alt="PEB red panel"
-                        className="w-80 h-1/2 object-cover transition-transform duration-500 hover:scale-105"
+                        className="w-full object-cover transition-transform duration-500 hover:scale-105"
                       />
                     </div>
-                    <div className="overflow-hidden rounded-sm">
+                    <div className="overflow-hidden  h-1/2 rounded-sm">
                       <img
                         src="/peb-right-img2.png"
                         alt="PEB structure interior"
-                        className="w-full h-1/2 object-cover transition-transform duration-500 hover:scale-105"
+                        className="w-full object-cover transition-transform duration-500 hover:scale-105"
                       />
                     </div>
                   </div>
