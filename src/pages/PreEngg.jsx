@@ -618,11 +618,11 @@ const PreEngg = () => {
               </button>
             </div>
             <div className="md:w-1/2 flex justify-center md:justify-end transform transition-all duration-500 hover:scale-105">
-              <img
+              {/* <img
                 src="/pre-engg-girl.png"
                 alt="Construction professional in safety gear"
                 className="max-h-80 -mb-16 object-contain hover:drop-shadow-xl transition-all duration-500"
-              />
+              /> */}
             </div>
           </div>
         </div>
