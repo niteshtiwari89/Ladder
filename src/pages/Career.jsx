@@ -323,7 +323,7 @@ const Career = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-gray-900 to-gray-800 opacity-70 hover:opacity-80 transition-opacity duration-500"></div>
 
       {/* Content container */}
-      <div className="relative z-10 container mx-auto px-6 py-16 md:py-20 flex flex-col md:flex-row items-center justify-between">
+      <div className="relative z-5 container mx-auto px-6 py-16 md:py-20 flex flex-col md:flex-row items-center justify-between">
         {/* Left text section */}
         <div className="md:w-1/2 mb-8 md:mb-0 transform hover:-translate-y-1 transition-transform duration-500">
           <p className="text-lg mb-2 hover:text-blue-300 transition-colors duration-300">Join the team</p>
