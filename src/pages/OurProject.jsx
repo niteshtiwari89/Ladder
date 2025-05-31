@@ -42,95 +42,6 @@ const OurProject = () => {
         }
     ];
 
-
-//     return (
-//         <>
-//             {/* Hero Section with Background Image */}
-
-//             <div className="relative w-full h-80 md:h-96">
-//                 {/* Background image with overlay */}
-//                 <div
-//                     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-//                     style={{
-//                         backgroundImage: "url('/our-project-hero.png')", // Replace with your actual image path
-//                         backgroundPosition: "center"
-//                     }}
-//                 >
-//                     {/* Dark overlay to make text more readable */}
-//                     <div className="absolute inset-0 bg-black opacity-46"></div>
-//                 </div>
-
-//                 {/* Content container */}
-//                 <div className="relative h-full flex flex-col items-center justify-center text-white px-4">
-//                     {/* Main heading */}
-//                     <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center">Strong. Reliable. Engineered for Excellence.</h1>
-
-//                     {/* Breadcrumb navigation */}
-//                     <div className="flex items-center text-lg">
-//                         <a href="/" className="hover:underline">About Us</a>
-//                         <span className="mx-2">/</span>
-//                         <span className="text-[#8CB5FF] font-bold text-xl">Why Us ?</span>
-//                     </div>
-//                 </div>
-//             </div>
-
-
-
-
-//             <div className="relative overflow-hidden rounded-lg shadow-lg">
-//                 {/* The main image - fully responsive */}
-//                 <img
-//                     src="/ourproject.png"
-//                     alt="Modern architectural building"
-//                     className="w-full h-auto object-cover"
-//                 />
-
-//             </div>
-
-
-
-//             {/* <div className="max-w-7xl mx-auto px-4 py-8">
-//                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-//                     {projects.map((project) => (
-//                         <div key={project.id} className="flex flex-col items-center text-center">
-//                             <div className="w-full h-70 mb-4 overflow-hidden">
-//                                 <img
-//                                     src={project.image}
-//                                     alt={project.title}
-//                                     className="w-full h-full object-cover grayscale"
-//                                 />
-//                             </div>
-//                             <h3 className="text-xl font-medium mb-2">{project.title}</h3>
-//                             <p className="text-lg text-gray-600 leading-relaxed">{project.description}</p>
-//                         </div>
-//                     ))}
-//                 </div>
-//             </div> */}
-//             <div className="max-w-7xl mx-auto px-4 py-8">
-//   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-//     {projects.map((project) => (
-//       <div
-//         key={project.id}
-//         className="flex flex-col items-center text-center transform transition-all duration-300 hover:-translate-y-2"
-//       >
-//         <div className="w-full h-70 mb-4 overflow-hidden">
-//           <img
-//             src={project.image}
-//             alt={project.title}
-//             className="w-full h-full object-cover grayscale transition-all duration-300 hover:grayscale-0"
-//           />
-//         </div>
-//         <h3 className="text-xl font-medium mb-2">{project.title}</h3>
-//         <p className="text-lg text-gray-600 leading-relaxed">{project.description}</p>
-//       </div>
-//     ))}
-//   </div>
-// </div>
-
-
-//         </>
-//     )
-
 return (
   <>
     {/* Hero Section with Enhanced Effects */}
@@ -207,17 +118,6 @@ return (
           <div className="text-white transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
             <h2 className="text-3xl font-bold mb-2">Signature Project</h2>
             <p className="text-lg mb-4">Innovative design meets structural excellence</p>
-            <button className="bg-[#8CB5FF] text-gray-900 px-6 py-2 rounded-full font-medium hover:bg-white hover:scale-105 transition-all duration-300 flex items-center">
-              View Case Study
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                className="h-5 w-5 ml-2" 
-                viewBox="0 0 20 20" 
-                fill="currentColor"
-              >
-                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
-            </button>
           </div>
         </div>
       </div>
@@ -265,11 +165,7 @@ return (
               <p className="text-gray-600 mb-4">{project.description}</p>
               
               {/* Hidden details that appear on hover */}
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <div className="flex justify-between text-sm text-gray-500 mb-3">
-                  <span>Client: {project.client}</span>
-                  <span>{project.year}</span>
-                </div>
+              {/* <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <button className="w-full mt-4 bg-gray-100 text-gray-800 py-2 rounded-lg hover:bg-[#8CB5FF] hover:text-white transition-colors duration-300 flex items-center justify-center">
                   View Details
                   <svg 
@@ -281,20 +177,11 @@ return (
                     <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         ))}
       </div>
-
-      {/* View More Button */}
-      {/* <div className="text-center mt-16">
-        <button className="relative inline-flex items-center px-8 py-3 bg-[#8CB5FF] text-white font-bold rounded-full overflow-hidden group">
-          <span className="relative z-10">View All Projects</span>
-          <span className="absolute inset-0 bg-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-          <span className="absolute right-0 h-full w-8 bg-white opacity-20 transform -skew-x-12 translate-x-16 group-hover:translate-x-0 transition-transform duration-500"></span>
-        </button>
-      </div> */}
     </div>
   </>
 )

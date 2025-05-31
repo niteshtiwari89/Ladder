@@ -11,6 +11,7 @@ import OurProject from './pages/OurProject'
 import Career from './pages/Career'
 import PositionPage from './pages/PositionPage'
 import BlogPage from './pages/Blog'
+import BlogDetails from './pages/BlogDetails';
 import SmartAndGreen from './pages/SmartAndGreen'
 import TurnkeySolution from './pages/TurnkeySolution'
 import ErectionServices from './pages/ErectionServices'
@@ -48,6 +49,7 @@ const App = () => {
         <Route path="/career" element={<Career />} />
         <Route path="/career/positions" element={<PositionPage />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:id" element={<BlogDetails />} />
         <Route path="/smart-and-green" element={<SmartAndGreen />} />
         <Route path="/turnkey-solution" element={<TurnkeySolution />} />
         <Route path="/turnkey-solution/erection-services" element={<ErectionServices />} />
